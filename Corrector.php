@@ -45,4 +45,13 @@ class Corrector
             return null;
         }
     }
+    /**
+     * 文字の置換
+     */
+    public static function strReplace($txt, $args = array()) {
+        $orgWord = isset($args[0]) ? $args[0] : "";
+        $newWord = isset($args[1]) ? $args[1] : "";
+        $replaced = str_replace($orgWord, $newWord, $txt);
+        return $replaced;
+    }
 }
